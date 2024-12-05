@@ -14,10 +14,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemIndigo
+        view.backgroundColor = .white
         
         setUpBarChart()
         setUpLineChart()
+        setUpCharToggle()
+        
+        setUpConstraints()
     }
     
     func setUpBarChart() {
@@ -42,5 +45,29 @@ class ViewController: UIViewController {
             self.barChart.isHidden = !isBarChart
             self.lineChart.isHidden = isBarChart
     }
+    
+    func setUpConstraints() {
+    barChart.translatesAutoresizingMaskIntoConstraints = false
+    lineChart.translatesAutoresizingMaskIntoConstraints = false
+    chartToggle.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+        // Bar Chart at the Top
+        barChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+        barChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+        barChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+        barChart.heightAnchor.constraint(equalToConstant: 300),
+        
+        lineChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+        lineChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+        lineChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+        lineChart.heightAnchor.constraint(equalToConstant: 300),
+        
+        chartToggle.topAnchor.constraint(equalTo: barChart.bottomAnchor, constant: 16),
+        chartToggle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        chartToggle.widthAnchor.constraint(equalToConstant: 200),
+        chartToggle.heightAnchor.constraint(equalToConstant: 32)
+    ])
+}
 }
 
