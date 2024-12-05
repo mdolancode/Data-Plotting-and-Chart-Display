@@ -89,6 +89,20 @@ class LineChartView: UIView {
 * Add subviews for Bar & Line Chart
 * Add example data 
 
+    private let barChart = BarChartView()
+    private let lineChart = LineChartView()
+    
+        func setUpBarChart() {
+        view.addSubview(barChart)
+        // Example Data
+        barChart.data = [10, 20, 15, 30, 25]
+    }
+    
+    func setUpLineChart() {
+        view.addSubview(lineChart)
+        lineChart.data = [10, 20, 15, 30, 25]
+    }
+
 5. Create the Segmented Control
 * Add a UISegmentedControl in ViewController.
 ** Add toggle options for "Bar" and "Line".
@@ -96,11 +110,24 @@ class LineChartView: UIView {
 
 private let chartToggle = UISegmentedControl(items: ["Bar", "Line"])
 
+    func setUpCharToggle() {
+        view.addSubview(chartToggle)
+        chartToggle.selectedSegmentIndex = 0
+        chartToggle.addTarget(self, action: #selector(chartTypeChanged), for: .valueChanged)
+    }
+
     @objc func chartTypeChanged() {
         let isBarChart = chartToggle.selectedSegmentIndex == 0
             self.barChart.isHidden = !isBarChart
             self.lineChart.isHidden = isBarChart
     }
+    
+    
+5. Implement the Layout
+* Use Auto Layout to position the elements:
+** Bar Chart: Top of the screen.
+** Line Chart: Overlapping with the Bar Chart (hidden by default).
+** Segmented Control: Below the charts.
     
             setUpConstraints()
     
@@ -124,7 +151,11 @@ private let chartToggle = UISegmentedControl(items: ["Bar", "Line"])
             
         ])
     }
-    
+
+6. Set up Default chart
+* set lineChart as isHidden in lineChart setup to make bar chart the default chart 
+lineChart.isHidden = true
+
 
 
 

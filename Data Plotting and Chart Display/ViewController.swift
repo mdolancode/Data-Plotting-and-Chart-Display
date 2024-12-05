@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         setUpBarChart()
         setUpLineChart()
-        setUpCharToggle()
+        setUpChartToggle()
         
         setUpConstraints()
     }
@@ -32,9 +32,10 @@ class ViewController: UIViewController {
     func setUpLineChart() {
         view.addSubview(lineChart)
         lineChart.data = [10, 20, 15, 30, 25]
+        lineChart.isHidden = true
     }
     
-    func setUpCharToggle() {
+    func setUpChartToggle() {
         view.addSubview(chartToggle)
         chartToggle.selectedSegmentIndex = 0
         chartToggle.addTarget(self, action: #selector(chartTypeChanged), for: .valueChanged)
