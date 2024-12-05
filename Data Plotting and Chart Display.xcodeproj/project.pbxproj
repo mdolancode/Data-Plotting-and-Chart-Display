@@ -14,6 +14,7 @@
 		C541EF792D022C1D00EA5492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C541EF772D022C1D00EA5492 /* LaunchScreen.storyboard */; };
 		C541EF812D022DF600EA5492 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541EF802D022DF600EA5492 /* BarChartView.swift */; };
 		C541EF832D0234F400EA5492 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C541EF822D0234F400EA5492 /* README.md */; };
+		C541EF852D0237D300EA5492 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541EF842D0237D300EA5492 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C541EF7A2D022C1D00EA5492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C541EF802D022DF600EA5492 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		C541EF822D0234F400EA5492 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C541EF842D0237D300EA5492 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C541EF6E2D022C1B00EA5492 /* SceneDelegate.swift */,
 				C541EF702D022C1B00EA5492 /* ViewController.swift */,
 				C541EF802D022DF600EA5492 /* BarChartView.swift */,
+				C541EF842D0237D300EA5492 /* LineChartView.swift */,
 				C541EF822D0234F400EA5492 /* README.md */,
 				C541EF752D022C1D00EA5492 /* Assets.xcassets */,
 				C541EF772D022C1D00EA5492 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C541EF712D022C1B00EA5492 /* ViewController.swift in Sources */,
+				C541EF852D0237D300EA5492 /* LineChartView.swift in Sources */,
 				C541EF6D2D022C1B00EA5492 /* AppDelegate.swift in Sources */,
 				C541EF6F2D022C1B00EA5492 /* SceneDelegate.swift in Sources */,
 				C541EF812D022DF600EA5492 /* BarChartView.swift in Sources */,
