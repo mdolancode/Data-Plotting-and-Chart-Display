@@ -13,7 +13,6 @@
 		C541EF762D022C1D00EA5492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C541EF752D022C1D00EA5492 /* Assets.xcassets */; };
 		C541EF792D022C1D00EA5492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C541EF772D022C1D00EA5492 /* LaunchScreen.storyboard */; };
 		C541EF812D022DF600EA5492 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541EF802D022DF600EA5492 /* BarChartView.swift */; };
-		C541EF832D0234F400EA5492 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C541EF822D0234F400EA5492 /* README.md */; };
 		C541EF852D0237D300EA5492 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541EF842D0237D300EA5492 /* LineChartView.swift */; };
 		C595453E2D0260760005E94C /* Data_Plotting_and_Chart_DisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C595453D2D0260760005E94C /* Data_Plotting_and_Chart_DisplayTests.swift */; };
 		C59545442D0261610005E94C /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541EF802D022DF600EA5492 /* BarChartView.swift */; };
@@ -38,7 +37,6 @@
 		C541EF782D022C1D00EA5492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C541EF7A2D022C1D00EA5492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C541EF802D022DF600EA5492 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
-		C541EF822D0234F400EA5492 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C541EF842D0237D300EA5492 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		C595453B2D0260760005E94C /* Data Plotting and Chart DisplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Data Plotting and Chart DisplayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C595453D2D0260760005E94C /* Data_Plotting_and_Chart_DisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_Plotting_and_Chart_DisplayTests.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				C541EF702D022C1B00EA5492 /* ViewController.swift */,
 				C541EF802D022DF600EA5492 /* BarChartView.swift */,
 				C541EF842D0237D300EA5492 /* LineChartView.swift */,
-				C541EF822D0234F400EA5492 /* README.md */,
 				C541EF752D022C1D00EA5492 /* Assets.xcassets */,
 				C541EF772D022C1D00EA5492 /* LaunchScreen.storyboard */,
 				C541EF7A2D022C1D00EA5492 /* Info.plist */,
@@ -185,7 +182,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C541EF832D0234F400EA5492 /* README.md in Resources */,
 				C541EF792D022C1D00EA5492 /* LaunchScreen.storyboard in Resources */,
 				C541EF762D022C1D00EA5492 /* Assets.xcassets in Resources */,
 			);
