@@ -156,6 +156,14 @@ private let chartToggle = UISegmentedControl(items: ["Bar", "Line"])
 * set lineChart as isHidden in lineChart setup to make bar chart the default chart 
 lineChart.isHidden = true
 
+7. Add Smooth Animation        
+        
+        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve) {
+            self.barChart.isHidden = !isBarChart
+            self.lineChart.isHidden = isBarChart
+        }
+
+
 
 
 

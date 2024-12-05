@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     private let barChart = BarChartView()
     private let lineChart = LineChartView()
     private let chartToggle = UISegmentedControl(items: ["Bar", "Line"])
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -43,32 +43,35 @@ class ViewController: UIViewController {
     
     @objc func chartTypeChanged() {
         let isBarChart = chartToggle.selectedSegmentIndex == 0
+        
+        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
             self.barChart.isHidden = !isBarChart
             self.lineChart.isHidden = isBarChart
+        })
     }
     
     func setUpConstraints() {
-    barChart.translatesAutoresizingMaskIntoConstraints = false
-    lineChart.translatesAutoresizingMaskIntoConstraints = false
-    chartToggle.translatesAutoresizingMaskIntoConstraints = false
-    
-    NSLayoutConstraint.activate([
-        // Bar Chart at the Top
-        barChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-        barChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-        barChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-        barChart.heightAnchor.constraint(equalToConstant: 300),
+        barChart.translatesAutoresizingMaskIntoConstraints = false
+        lineChart.translatesAutoresizingMaskIntoConstraints = false
+        chartToggle.translatesAutoresizingMaskIntoConstraints = false
         
-        lineChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-        lineChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-        lineChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-        lineChart.heightAnchor.constraint(equalToConstant: 300),
-        
-        chartToggle.topAnchor.constraint(equalTo: barChart.bottomAnchor, constant: 16),
-        chartToggle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        chartToggle.widthAnchor.constraint(equalToConstant: 200),
-        chartToggle.heightAnchor.constraint(equalToConstant: 32)
-    ])
-}
+        NSLayoutConstraint.activate([
+            // Bar Chart at the Top
+            barChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            barChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            barChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            barChart.heightAnchor.constraint(equalToConstant: 300),
+            
+            lineChart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            lineChart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            lineChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            lineChart.heightAnchor.constraint(equalToConstant: 300),
+            
+            chartToggle.topAnchor.constraint(equalTo: barChart.bottomAnchor, constant: 16),
+            chartToggle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            chartToggle.widthAnchor.constraint(equalToConstant: 200),
+            chartToggle.heightAnchor.constraint(equalToConstant: 32)
+        ])
+    }
 }
 
